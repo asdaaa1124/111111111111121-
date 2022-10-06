@@ -213,6 +213,10 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
                 "value": wind_dir,
                 "color": get_color()
             },
+            "encounter_day": {
+                "value": encounter_days,
+                "color": get_color()
+            },
             "love_day": {
                 "value": love_days,
                 "color": get_color()
