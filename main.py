@@ -168,13 +168,6 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     day = localtime().tm_mday
     today = datetime.date(datetime(year=year, month=month, day=day))
     week = week_list[today.isoweekday() % 7]
-    # 获取在一起的日子的日期格式
-    encounter_year = int(config["encounter_date"].split("-")[0])
-    encounter_month = int(config["encounter_date"].split("-")[1])
-    encounter_day = int(config["encounter_date"].split("-")[2])
-    encounter_date = date(encounter_year, encounter_month, encounter_day)
-    # 获取在一起的日期差
-    encounter_days = str(today.__sub__(encounter_date)).split(" ")[0]
     # 获取在相恋的日子的日期格式
     love_year = int(config["love_date"].split("-")[0])
     love_month = int(config["love_date"].split("-")[1])
