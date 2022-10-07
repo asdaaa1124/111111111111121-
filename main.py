@@ -168,23 +168,13 @@ def send_message(to_user, access_token, region_name, weather, temp, wind_dir, no
     day = localtime().tm_mday
     today = datetime.date(datetime(year=year, month=month, day=day))
     week = week_list[today.isoweekday() % 7]
-    # 获取在相恋的日子的日期格式
+    # 获取在相遇的日子的日期格式
     encounter_year = int(config["encounter_date"].split("-")[0])
     encounter_month = int(config["encounter_date"].split("-")[1])
     encounter_day = int(config["encounter_date"].split("-")[2])
     encounter_date = date(encounter_year, encounter_month, encounter_day)
-    # 获取在相恋的日期差
+    # 获取相遇的日期差
     encounter_days = str(today.__sub__(encounter_date)).split(" ")[0]
-    
-    def send_message(to_user, access_token, region_name, weather, temp, wind_dir, note_ch, note_en, max_temp, min_temp,
-                 sunrise, sunset, category, pm2p5, proposal, chp):
-    url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={}".format(access_token)
-    week_list = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"]
-    year = localtime().tm_year
-    month = localtime().tm_mon
-    day = localtime().tm_mday
-    today = datetime.date(datetime(year=year, month=month, day=day))
-    week = week_list[today.isoweekday() % 7]
     # 获取在相恋的日子的日期格式
     love_year = int(config["love_date"].split("-")[0])
     love_month = int(config["love_date"].split("-")[1])
