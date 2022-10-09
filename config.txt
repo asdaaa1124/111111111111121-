@@ -18,6 +18,7 @@
 "region": "宽甸",
 # 生日
 "birthday1": {"name": "李小妍小公主", "birthday": "1999-05-03"},
+"birthday2": {"name": "夏晨阳驸马爷", "birthday": "1999-05-15"},
 # 在一起的日子，格式同上
 "encounter_date": "2021-08-09",
 # 在一起的日子，格式同上
